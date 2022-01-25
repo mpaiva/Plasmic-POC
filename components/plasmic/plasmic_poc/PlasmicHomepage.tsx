@@ -49,12 +49,9 @@ export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicHomepage__ArgsType = {
-  children?: React.ReactNode;
-};
-
+export type PlasmicHomepage__ArgsType = {};
 type ArgPropType = keyof PlasmicHomepage__ArgsType;
-export const PlasmicHomepage__ArgProps = new Array<ArgPropType>("children");
+export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
@@ -118,9 +115,7 @@ function PlasmicHomepage__RenderFunc(props: {
               sty.text
             )}
           >
-            {
-              "Press T and click to add text, or click the blue + button and select Text."
-            }
+            {"paragraph"}
           </div>
 
           <TextInput
@@ -128,11 +123,6 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.textInput}
             className={classNames("__wab_instance", sty.textInput)}
           />
-
-          {p.renderPlasmicSlot({
-            defaultContents: null,
-            value: args.children
-          })}
         </p.Stack>
       </div>
     </React.Fragment>
